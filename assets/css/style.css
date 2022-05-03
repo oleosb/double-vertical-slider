@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*,
+*::before,
+*::after{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        list-style-type: none;
+        text-decoration: none;
+}
+
+html{
+        font-family: 'Roboto', sans-serif;
+}
+
+body{
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+}
+
+body,
+.left,
+.profile-container{
+        display: flex;
+}
+
+.left-side{
+        width: 25vw;
+        height: 100vh;
+        overflow: hidden;
+}
+
+.left{
+        width: 100%;
+        height: 100%;
+        color: #fff;
+        transform: translateY(0%);
+        transition: transform .4s ease;
+}
+
+.left,
+.profile-container{
+        justify-content: center;
+        align-items: center;
+}
+
+.profile-container{
+        flex-direction: column;
+}
+
+.profile-photo{
+        margin: 0 0 .6em 0;
+}
+
+.profile-photo > img{
+        width: 6em;
+        border-radius: 50%;
+}
+
+.profile-name{
+        text-transform: uppercase;
+        font-size: 1em;
+}
+
+.profile-social > a{
+        color: #fff;
+        font-size: .8em;
+        font-weight: 300;
+        transition: color .2s ease;
+}
+
+.profile-social:hover > a{
+        color: rgba(255, 255, 255, 0.6);
+}
+
+.left:nth-of-type(1){
+        background-color: #3d4b5e;
+}
+
+.left:nth-of-type(2){
+        background-color: #C96C40;
+}
+
+.left:nth-of-type(3){
+        background-color: #5F82A8;
+}
+
+.left:nth-of-type(4){
+        background-color: #7F5A51;
+}
+
+.left:nth-of-type(5){
+        background-color: #B19D9A;
+}
+
+.cards-container{
+        width: 75vw;
+        height: 100vh;
+        overflow: hidden;
+}
+
+.card{
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        transform: translateY(-400%);
+        transition: transform .4s ease;
+}
+
+.slider-btns{
+        position: absolute;
+        top: 50%;
+        left: 25vw;
+        transform: translate(-50%, -50%);
+}
+
+.btn{
+        height: 1em; 
+        width: 1em;
+        padding: 1em;
+        background-color: #fff;
+        position: relative;
+        cursor: pointer;
+}
+
+.btn::after{
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 50%;
+        left: 25%;
+	border: .5em solid #000;
+	border-width: .2em .2em 0 0;
+}
+
+.down::after{
+        transform: rotate(135deg);
+        bottom: 40%;
+}
+
+.up::after{
+        transform: rotate(-45deg);
+        top: 40%;
+}
+
+.down{
+        margin: 0 0 0 2em;
+        border-bottom-right-radius: .2em;
+        border-top-right-radius: .2em;
+}
+
+.up{
+        margin: 0 2em 0 0;
+        border-bottom-left-radius: .2em;
+        border-top-left-radius: .2em;
+}
